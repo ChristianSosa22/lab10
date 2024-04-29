@@ -11,7 +11,10 @@
   },
   "dependencies": {
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "@mui/material": "^5.2.3",
+    "@emotion/react": "^11.5.0",
+    "@emotion/styled": "^11.3.0"
   },
   "devDependencies": {
     "@types/react": "^18.2.79",
@@ -24,3 +27,4 @@
     "vite": "^5.2.10"
   }
 }
+
