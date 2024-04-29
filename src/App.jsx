@@ -28,7 +28,7 @@ const App = () => {
         Mini Task Dashboard
       </Typography>
       <Typography variant="h6" align="center" gutterBottom>
-        Task Counter: {count}
+        {count} Pending tasks
       </Typography>
       <TaskInput addTask={addTask} />
       <TaskList tasks={tasks} deleteTask={deleteTask} />
