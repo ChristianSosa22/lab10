@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import TaskInput from './TaskInputForm';
 import TaskList from './TaskList';
-import { Container, Typography } from '@mui/material';
+import { Container, Typography, Button } from '@mui/material';
 
 const App = () => {
   const [tasks, setTasks] = useState([]);
@@ -17,6 +17,10 @@ const App = () => {
     setTasks(updatedTasks);
     setCount(count - 1);
   };
+  const deleteAllTasks = () => {
+    setTasks([]);
+    setCount(0); // Reset count to 0 when all tasks are deleted
+  };
 
   return (
     <Container maxWidth="md">
@@ -28,9 +32,11 @@ const App = () => {
       </Typography>
       <TaskInput addTask={addTask} />
       <TaskList tasks={tasks} deleteTask={deleteTask} />
+      <Button variant="contained" color="primary" onClick={deleteAllTasks}>
+        Delete All
+      </Button>
     </Container>
   );
 };
 
 export default App;
-
